@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: {name}
+  namespace: {namespace}
+spec:
+  hard:
+    pods: "10"
+    services: "10"
+    configmaps: "10"
+    persistentvolumeclaims: "10"
+    replicationcontrollers: "20"
+    secrets: "20"
+    services.loadbalancers: "5"
+    services.nodeports : "5"

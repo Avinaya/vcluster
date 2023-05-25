@@ -1,0 +1,19 @@
+apiVersion: infrastructure.cluster.x-k8s.io/v1alpha1
+kind: VCluster
+metadata:
+  name: {name}
+  namespace: {namespace}
+spec:
+  controlPlaneEndpoint:
+    host: ""
+    port: 0
+  helmRelease:
+    # chart:
+    #   name: vcluster-k8s
+    #   repo: null
+    #   version: null
+    values: |
+      service:
+        type: LoadBalancer
+
+  kubernetesVersion: 1.27.0
